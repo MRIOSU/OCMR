@@ -6,11 +6,14 @@ function [Kdata, param] = read_ocmr(file_name)
 % Input:  *.h5 file name
 % Output: Kdata    k-space data, orgnazide as {'kx'  'ky'  'kz'  'coil'  'phase'  'set'  'slice'  'rep'  'avg'}
 %         param  some parameters of the scan
-%                param.enc_Size = [kx ky kz]
-%                param.enc_FOV = [FOV_x, FOV_y, thickness]  
-%                param.ksapce_dim = {'kx'  'ky'  'kz'  'coil'  'phase'  'set'  'slice'  'rep'  'avg'}
-%                param.sequenceParameters (TR, TE, TI, flipAngle_deg, sequence_type, echo_spacing)
-%
+%                param.enc_Size, [kx ky kz];
+%                param.enc_FOV, [FOV_x, FOV_y, thickness];
+%                param.TRes, temporal resolution (ms);
+%                param.TE (ms); param.TI (ms); param.echo_spacing (ms);
+%                param.flipAngle_deg (degree)
+%                param.sequence_type;
+%                param.ksapce_dim, {'kx'  'ky'  'kz'  'coil'  'phase'  'set'  'slice'  'rep'  'avg'}
+
 
 % This is a function to read K-space from ISMRMD *.h5 data
 % Modifid by Chong Chen (Chong.Chen@osumc.edu) based on the Matlab script "test_recon_dataset.m"
@@ -54,10 +57,16 @@ enc_FOVx = hdr.encoding.encodedSpace.fieldOfView_mm.x;
 enc_FOVy = hdr.encoding.encodedSpace.fieldOfView_mm.y;
 enc_FOVz = hdr.encoding.encodedSpace.fieldOfView_mm.z;
 
-param.enc_Size = [enc_Nx  enc_Ny  enc_Nz];
+% param.enc_Size = [enc_Nx  enc_Ny  enc_Nz];
 param.enc_FOV = [enc_FOVx enc_FOVy enc_FOVz];
 
-param.sequenceParameters = hdr.sequenceParameters;
+param.TRes = hdr.sequenceParameters.TR; %temporal resolution
+param.TE = hdr.sequenceParameters.TE;
+param.TI = hdr.sequenceParameters.TI;
+param.echo_spacing = hdr.sequenceParameters.echo_spacing;
+param.flipAngle_deg = hdr.sequenceParameters.flipAngle_deg;
+param.sequence_type = hdr.sequenceParameters.sequence_type;
+
 
 % Number of slices, coils, repetitions, contrasts etc.
 % We have to wrap the following in a try/catch because a valid xml header may
