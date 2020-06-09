@@ -10,7 +10,7 @@ Download data from the OCMR repository from the link on this page www.ocmr.edu.
 ### Step 2: Download Matlab code
 Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. Download Matlab wrapper, read_ocmr.m, and an example script, example_main_ocmr.m, from https://github.com/MRIOSU/OCMR.
 ### Step 3: Read the Data
-Place read_ocmr.m, example_main_ocmr.m, and entire ‘/+ismrmrd’ subfolder in the same folder. Execute example_main_ocmr.m in Matlab. It will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
+Place read_ocmr.m, example_main_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Execute example_main_ocmr.m in Matlab. It will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
 
 The instructions to read the data using Python will be available in future.
 
