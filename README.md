@@ -30,7 +30,8 @@ Put read_ocmr.m, example_main_ocmr.m and ‘/+ismrmrd’ in the same folder. Exe
 It will generate an nine-dimensional array, (kData),
 for the k-space data and structure (param) that captures the acquisition parameters.
 
-This instruction is for Matlab. The instructions to read the data using Python will be available
+## Reading Data into Python
+The instructions to read the data using Python will be available
 in future.
 
 ## Data Structure
