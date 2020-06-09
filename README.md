@@ -1,10 +1,12 @@
-# OCMR (v1.0)–Open-Access Repository for Multi-Coilk-space Data for Cardiovascular Magnetic ResonanceImaging
+# OCMR (v1.0) 
+# Open-Access Repository for Multi-Coilk-space Data for Cardiovascular Magnetic ResonanceImaging
 
 Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excellent soft-tissue contrast. 
 The limited efficiency of MRI data acquisition and physiological motions requireaccelerating the acquisition process. 
 Recovering diagnostic quality CMR images from highlyundersampled data has been active area of research. 
 Several data acquisition and processingmethods have been proposed to accelerate CMR. Platforms to objectively evaluate and 
-comparedifferent processing can expedite innovation and promote clinical translation of these methods.
+comparedifferent processing can expedite innovation and promote clinical translation of these methods. In this work, we introduce an open-access repository, called OCMR, that provides multi-coil
+k-space data from cardiac cine .
 
 In OCMR, there are a total of 265 datasets. 53 of those datasets have no undersampling in the
 phase encoding direction, while the remaining 212 are prospectively undersampled. The datasets
