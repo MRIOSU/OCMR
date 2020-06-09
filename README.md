@@ -29,7 +29,8 @@ Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/m
 Put read_ocmr.m, example_main_ocmr.m and ‘/+ismrmrd’ in the same folder. Execute example_main_ocmr.m in Matlab.
 It will generate an nine-dimensional array, (kData),
 for the k-space data and structure (param) that captures the acquisition parameters.
-The instructions are for Matlab, and the instructions to read the data using Python will be available
+
+This instruction is for Matlab. The instructions to read the data using Python will be available
 in future.
 
 ## Data Structure
