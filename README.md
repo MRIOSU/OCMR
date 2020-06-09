@@ -1,22 +1,9 @@
 # OCMR (v1.0) 
-## Open-Access Repository for Multi-Coilk-space Data for Cardiovascular Magnetic ResonanceImaging
+## Open-Access Repository for Multi-Coil k-space Data for Cardiovascular Magnetic Resonance Imaging
 
-Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excellent soft-tissue contrast. 
-The limited efficiency of MRI data acquisition and physiological motions requireaccelerating the acquisition process. 
-Recovering diagnostic quality CMR images from highlyundersampled data has been active area of research. 
-Several data acquisition and processingmethods have been proposed to accelerate CMR. Platforms to objectively evaluate and 
-comparedifferent processing can expedite innovation and promote clinical translation of these methods. In this work, we introduce an open-access repository, called OCMR, that provides multi-coil
-k-space data from cardiac cine.
+Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excellent soft-tissue contrast without using ionzing radiation. The limited efficiency of MRI data acquisition and physiological motions require accelerating the acquisition process. Recovering diagnostic quality CMR images from highly undersampled data has been active area of research. Several data acquisition and processingmethods have been proposed to accelerate CMR. Platforms to objectively evaluate and comparedifferent processing can expedite innovation and promote clinical translation of these methods. In this work, we introduce an open-access repository, called OCMR, that provides multi-coil k-space data from cardiac cine.
 
-OCMR is the fist open-access repository that provides multi-coil k-space data for cardiac cine. The
-fully sampled datasets are intended for quantitative comparison and evaluation of image reconstruction
-methods. The free-breathing, prospectively undersampled datasets are intended to qualitatively
-evaluate the generalizability of the reconstruction method.
-There are a total of 265 datasets in OCMR. 53 of those datasets have no undersampling in the
-phase encoding direction, while the remaining 212 are prospectively undersampled. The datasets
-were collected on three Siemens Magnetom scanners: Prisma (3T), Avanto (1.5T) and Sola (1.5T).
-The data from the OCMR repository can be downloaded from the link on www.ocmr.edu. Each
-dataset is assigned eight binary labels, which allows downloading a subset of the datasets.
+OCMR is the fist open-access repository that provides multi-coil k-space data for cardiac cine. The fully sampled datasets are intended for quantitative comparison and evaluation of image reconstruction methods. The free-breathing, prospectively undersampled datasets are intended to qualitatively evaluate the generalizability of the reconstruction method. There are a total of 265 datasets in OCMR. 53 of those datasets have no undersampling in the phase encoding direction, while the remaining 212 are prospectively undersampled. The datasets were collected on three Siemens Magnetom scanners: Prisma (3T), Avanto (1.5T) and Sola (1.5T). The data from the OCMR repository can be downloaded from the link on www.ocmr.edu. Each dataset is assigned eight binary labels, which allows downloading a subset of the datasets.
 
 
 ## Reading Data into Matlab
