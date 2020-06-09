@@ -6,8 +6,7 @@ function [Kdata, param] = read_ocmr(file_name)
 % Input:  *.h5 file name
 % Output: Kdata    k-space data, orgnazide as {'kx'  'ky'  'kz'  'coil'  'phase'  'set'  'slice'  'rep'  'avg'}
 %         param  some parameters of the scan
-%                param.enc_Size, [kx ky kz];
-%                param.enc_FOV, [FOV_x, FOV_y, thickness];
+%                param.FOV, [FOV_x, FOV_y, thickness];
 %                param.TRes, temporal resolution (ms);
 %                param.TE (ms); param.TI (ms); param.echo_spacing (ms);
 %                param.flipAngle_deg (degree)
@@ -29,6 +28,7 @@ function [Kdata, param] = read_ocmr(file_name)
 %   
 % Limitations:
 %   ignores noise scans (no pre-whitening)
+%   no zero padding along PE1 direction, pixel may be rectangular
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Loading an existing file %
@@ -49,8 +49,9 @@ hdr = ismrmrd.xml.deserialize(dset.readxml);
 %% Encoding and reconstruction information
 % Matrix size
 enc_Nx = hdr.encoding.encodedSpace.matrixSize.x;
-enc_Ny = hdr.encoding.encodedSpace.matrixSize.y;
+% enc_Ny = hdr.encoding.encodedSpace.matrixSize.y;
 enc_Nz = hdr.encoding.encodedSpace.matrixSize.z;
+enc_Ny = (hdr.encoding.encodingLimits.kspace_encoding_step_1.maximum + 1); %no zero padding along Ny direction
 
 % Field of View
 enc_FOVx = hdr.encoding.encodedSpace.fieldOfView_mm.x;
@@ -58,7 +59,7 @@ enc_FOVy = hdr.encoding.encodedSpace.fieldOfView_mm.y;
 enc_FOVz = hdr.encoding.encodedSpace.fieldOfView_mm.z;
 
 % param.enc_Size = [enc_Nx  enc_Ny  enc_Nz];
-param.enc_FOV = [enc_FOVx enc_FOVy enc_FOVz];
+param.FOV = [enc_FOVx enc_FOVy enc_FOVz];
 
 param.TRes = hdr.sequenceParameters.TR; %temporal resolution
 param.TE = hdr.sequenceParameters.TE;
@@ -155,16 +156,13 @@ if ( meas.head.center_sample(1)*2 <  enc_Nx)
     kx_prezp = enc_Nx - meas.head.number_of_samples(1);
 end
 
-%% isotropic resolution
-ky_prezp = floor((enc_Ny - hdr.encoding.encodingLimits.kspace_encoding_step_1.center*2)/2);
-% param.Phase_Encoding_max = (hdr.encoding.encodingLimits.kspace_encoding_step_1.maximum + 1);
 
 %% Read the K-space
 param.kspace_dim = {'kx',  'ky',  'kz', 'coil', 'phase', 'set', 'slice', 'rep', 'avg'};
 Kdata = zeros(enc_Nx, enc_Ny, enc_Nz, nCoils, nPhases, nSets, nSlices, nReps, nAverage);
 isReverse = meas.head.flagIsSet('ACQ_IS_REVERSE');
 for p = 1:meas.getNumber
-    ky = meas.head.idx.kspace_encode_step_1(p) + 1 + ky_prezp;
+    ky = meas.head.idx.kspace_encode_step_1(p) + 1;
     kz = meas.head.idx.kspace_encode_step_2(p) + 1;
     phase =  meas.head.idx.phase(p) + 1;
     set =  meas.head.idx.set(p) + 1;
