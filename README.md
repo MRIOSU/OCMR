@@ -54,7 +54,6 @@ inspected to ensure that identifying facial features are not included.
 ## Future Directions
 The current version (v1.0) of OCMR
 only includes cardiac cine data. Also, with 53 fully sampled datasets and 212 prospectively under-
-10
 sampled datasets, we recognize that the size of OCMR is small. We intend to progressively expand
 the size of cardiac cine data and include additional CMR applications, including 2D PC-CMR.
 ## Acknowledgments
