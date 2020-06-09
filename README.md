@@ -6,9 +6,13 @@ The limited efficiency of MRI data acquisition and physiological motions require
 Recovering diagnostic quality CMR images from highlyundersampled data has been active area of research. 
 Several data acquisition and processingmethods have been proposed to accelerate CMR. Platforms to objectively evaluate and 
 comparedifferent processing can expedite innovation and promote clinical translation of these methods. In this work, we introduce an open-access repository, called OCMR, that provides multi-coil
-k-space data from cardiac cine .
+k-space data from cardiac cine.
 
-In OCMR, there are a total of 265 datasets. 53 of those datasets have no undersampling in the
+OCMR is the fist open-access repository that provides multi-coil k-space data for cardiac cine. The
+fully sampled datasets are intended for quantitative comparison and evaluation of image reconstruction
+methods. The free-breathing, prospectively undersampled datasets are intended to qualitatively
+evaluate the generalizability of the reconstruction method.
+There are a total of 265 datasets in OCMR. 53 of those datasets have no undersampling in the
 phase encoding direction, while the remaining 212 are prospectively undersampled. The datasets
 were collected on three Siemens Magnetom scanners: Prisma (3T), Avanto (1.5T) and Sola (1.5T).
 The data from the OCMR repository can be downloaded from the link on www.ocmr.edu. Each
@@ -47,10 +51,7 @@ All ISMRMRD datasets included in OCMR have been de-identified, where Protected H
 inspected to ensure that identifying facial features are not included.
 
 ## Future Directions
-OCMR is the fist open-access repository that provides multi-coil k-space data for cardiac cine. The
-fully sampled datasets are intended for quantitative comparison and evaluation of image reconstruction
-methods. The free-breathing, prospectively undersampled datasets are intended to qualitatively
-evaluate the generalizability of the reconstruction method. The current version (v1.0) of OCMR
+The current version (v1.0) of OCMR
 only includes cardiac cine data. Also, with 53 fully sampled datasets and 212 prospectively under-
 10
 sampled datasets, we recognize that the size of OCMR is small. We intend to progressively expand
