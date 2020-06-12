@@ -5,7 +5,7 @@ Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excell
 
 
 ## Reading OCMR Data 
-Download data from the OCMR repository from the link on this page www.ocmr.edu. Below are the instructions to read OCMR data into Matalb dand Python, respectively.
+Download data from the OCMR repository from the link on this page www.ocmr.edu. Below are the instructions to read OCMR data into Matlb dand Python, respectively.
 ## Matlab
 ### Step 1: Download Matlab code
 Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. Download Matlab wrapper, read_ocmr.m, and an example script, example_main_ocmr.m, from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
