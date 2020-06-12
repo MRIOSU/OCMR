@@ -8,7 +8,7 @@ Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excell
 ### Step 1: Download OCMR data
 Download data from the OCMR repository from the link on this page www.ocmr.edu.
 ### Step 2: Download Matlab code
-Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. Download Matlab wrapper, read_ocmr.m, and an example script, example_main_ocmr.m, from https://github.com/MRIOSU/OCMR.
+Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. Download Matlab wrapper, read_ocmr.m, and an example script, example_main_ocmr.m, from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
 ### Step 3: Read the Data
 Place read_ocmr.m, example_main_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Execute example_main_ocmr.m in Matlab. It will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
 
