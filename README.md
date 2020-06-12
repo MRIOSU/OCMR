@@ -21,10 +21,10 @@ Download data from the OCMR repository from the link on this page www.ocmr.edu.
 Download OCMR Jupyter tutorial from https://github.com/MRIOSU/OCMR/blob/master/python/OCMR%20Tutorial.ipynb. Download read_ismrmrd.py from https://github.com/MRIOSU/OCMR/blob/master/python/read_ismrmd.py
 
 ### Step 3: Install ismrmrd-python and ismrmrd-python-tools
-Download ismrmrd-python https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools https://github.com/ismrmrd/ismrmrd-python-tools.  There is a brief instruction to setup ismrmrd-python and ismrmrd-python-tools in the OCMR toturial.
+Download ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools.  A brief instruction to install ismrmrd-python and ismrmrd-python-tools can be found in 'OCMR Tutorial.ipynb'.
 
 ### Step 4: Read the Data
-Place 'read_ismrmrd.py' and 'OCMR Tutorial.ipynb'. Modify the 'filename' as needed, and run the example in 'OCMR Tutorial.ipynb'.
+Place 'read_ismrmrd.py' and 'OCMR Tutorial.ipynb' in the same folder. Modify the 'filename' as needed, and run the example in 'OCMR Tutorial.ipynb'.
 
 ## Data Structure
 Once a dataset is read into Matlab, it yields the k-space array, kData, and a structure, param. The kData array has nine dimensions: [kx, ky, kz, coil, phase, set, slice, rep, avg], which represent frequency encoding, first phase encoding, second phase encoding, coil, phase (time), set (velocity encoding), slice, repetition, and number of averages, respectively. For example, a dataset with frequency encoding size 160, phase encoding size 120, number of coils 18, number of frames 60, number of slices 10 will generate kData with these dimension: 160x120x1x18x60x1x10x1x1. The second output, param, provides pertinent acquisition parameters. For example, param.FOV, param.TRes, param.flipAngle_deg, param.sequence_type specify field-of-view, temporal resolution, flip angle, and the type of sequence.
