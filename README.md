@@ -14,7 +14,7 @@ Place read_ocmr.m, example_main_ocmr.m, and the entire ‘/+ismrmrd’ subfolder
 
 ## Python
 ### Step 1: Download OCMR tutorial and the python version of read wrapper
-Download OCMR Jupyter tutorial from https://github.com/MRIOSU/OCMR/blob/master/python/OCMR%20Tutorial.ipynb. Download read_ismrmrd.py from https://github.com/MRIOSU/OCMR/blob/master/python/read_ismrmd.py
+Download 'OCMR Tutorial.ipynb' from https://github.com/MRIOSU/OCMR/blob/master/python/OCMR%20Tutorial.ipynb. Download ‘read_ismrmrd.py’ from https://github.com/MRIOSU/OCMR/blob/master/python/read_ismrmd.py
 
 ### Step 2: Install ismrmrd-python and ismrmrd-python-tools
 Download ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools.  A brief instruction to install ismrmrd-python and ismrmrd-python-tools can be found in 'OCMR Tutorial.ipynb'.
