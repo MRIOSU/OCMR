@@ -4,9 +4,20 @@ import ismrmrd.xsd
 import numpy as np
 
 def read_ismrmrd(filename):
+# Before running the code, install ismrmrd-python and ismrmrd-python-tools:
+#  https://github.com/ismrmrd/ismrmrd-python
+#  https://github.com/ismrmrd/ismrmrd-python-tools
+# Last modified: 06-12-2020 by Chong Chen (Chong.Chen@osumc.edu)
+#
+# Input:  *.h5 file name
+# Output: all_data    k-space data, orgnazide as {'kx'  'ky'  'kz'  'coil'  'phase'  'set'  'slice'  'rep'  'avg'}
+#         param  some parameters of the scan
+# 
 
-        # Load file
-    #filename = './data/fs_0015_3T.h5'
+# This is a function to read K-space from ISMRMD *.h5 data
+# Modifid by Chong Chen (Chong.Chen@osumc.edu) based on the python script
+# from https://github.com/ismrmrd/ismrmrd-python-tools/blob/master/recon_ismrmrd_dataset.py
+
     if not os.path.isfile(filename):
         print("%s is not a valid file" % filename)
         raise SystemExit
