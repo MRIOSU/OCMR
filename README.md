@@ -18,7 +18,7 @@ Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in o
 ### Step 1: Install ismrmrd libraries
 Download ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools.
 ### Step 2: Download wrapper
-Download 'example_ocmr.ipynb' and 'read_ocmr.py' from https://github.com/MRIOSU/OCMR/tree/master/Python
+Download 'read_ocmr.py' and 'example_ocmr.ipynb' from https://github.com/MRIOSU/OCMR/tree/master/Python
 ### Step 3: Read the Data
 Place 'read_ocmr.py' and 'example_ocmr.ipynb' in one folder. Modify the 'filename' as needed, and run the example in 'example_ocmr.ipynb'.
 
