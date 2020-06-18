@@ -10,7 +10,7 @@ Download data from the OCMR repository from the link on this page www.ocmr.edu. 
 ### Step 1: Download ismrmrd libraries
 Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. 
 ### Step 2: Download wrapper
-Download read_ocmr.m and example_main_ocmr.m from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
+Download read_ocmr.m and example_ocmr.m from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
 ### Step 2: Read the Data
 Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Modify the 'filename' as needed, execute example_ocmr.m in Matlab.
 
