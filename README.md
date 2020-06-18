@@ -7,21 +7,23 @@ Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excell
 Download data from the OCMR repository from the link on this page www.ocmr.edu. Below are the instructions to read OCMR data into Matlab dand Python, respectively. After running the code, it will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
 
 ## Read Data Using Matlab
-### Step 1: Download Matlab code
-Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. Download Matlab read wrapper, read_ocmr.m, and an example script, example_main_ocmr.m, from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
+### Step 1: Download ismrmrd libraries
+Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. 
+### Step 2: Download wrapper
+Download read_ocmr.m and example_main_ocmr.m from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
 ### Step 2: Read the Data
-Place read_ocmr.m, example_main_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Execute example_main_ocmr.m in Matlab.
+Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Modify the 'filename' as needed, execute example_ocmr.m in Matlab.
 
 ## Read Data Using Python
-### Step 1: Download OCMR tutorial and the python version of read wrapper
-Download 'OCMR Tutorial.ipynb' from https://github.com/MRIOSU/OCMR/blob/master/python/OCMR%20Tutorial.ipynb. Download ‘read_ocmr.py’ from https://github.com/MRIOSU/OCMR/blob/master/python/read_ocmr.py
-### Step 2: Install ismrmrd-python and ismrmrd-python-tools
-Download ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools.  A brief instruction to install ismrmrd-python and ismrmrd-python-tools can be found in 'OCMR Tutorial.ipynb'.
+### Step 1: Install ismrmrd libraries
+Download ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools.
+### Step 2: Download wrapper
+Download 'example_ocmr.ipynb' and 'read_ocmr.py' from https://github.com/MRIOSU/OCMR/tree/master/Python
 ### Step 3: Read the Data
-Place 'read_ocmr.py' and 'OCMR Tutorial.ipynb' in one folder. Modify the 'filename' as needed, and run the example in 'OCMR Tutorial.ipynb'.
+Place 'read_ocmr.py' and 'example_ocmr.ipynb' in one folder. Modify the 'filename' as needed, and run the example in 'example_ocmr.ipynb'.
 
 ## Data Structure
-Once a dataset is read into Matlab, it yields the k-space array, kData, and a structure, param. The kData array has nine dimensions: [kx, ky, kz, coil, phase, set, slice, rep, avg], which represent frequency encoding, first phase encoding, second phase encoding, coil, phase (time), set (velocity encoding), slice, repetition, and number of averages, respectively. For example, a dataset with frequency encoding size 160, phase encoding size 120, number of coils 18, number of frames 60, number of slices 10 will generate kData with these dimension: 160x120x1x18x60x1x10x1x1. The second output, param, provides pertinent acquisition parameters. For example, param.FOV, param.TRes, param.flipAngle_deg, param.sequence_type specify field-of-view, temporal resolution, flip angle, and the type of sequence.
+Once a dataset is read into Matlab or Python, it yields the k-space array, kData, and a structure, param. The kData array has nine dimensions: [kx, ky, kz, coil, phase, set, slice, rep, avg], which represent frequency encoding, first phase encoding, second phase encoding, coil, phase (time), set (velocity encoding), slice, repetition, and number of averages, respectively. For example, a dataset with frequency encoding size 160, phase encoding size 120, number of coils 18, number of frames 60, number of slices 10 will generate kData with these dimension: 160x120x1x18x60x1x10x1x1. The second output, param, provides pertinent acquisition parameters. For example, param.FOV, param.TRes, param.flipAngle_deg, param.sequence_type specify field-of-view, temporal resolution, flip angle, and the type of sequence.
 
 ## Anonymization
 All ISMRMRD datasets included in OCMR have been de-identified, where Protected Health Information (PHI) as well as scan date and location have been removed. All datasets have been manually inspected to ensure that identifying facial features are not included.
