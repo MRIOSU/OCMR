@@ -7,20 +7,20 @@ Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excell
 Download data from the OCMR repository from the link on this page www.ocmr.edu. Below are the instructions to read OCMR data into Matlab dand Python, respectively. After running the code, it will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
 
 ## Read Data Using Matlab
-### Step 1: Download ismrmrd libraries
-Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. 
-### Step 2: Download wrapper
+### Step 1: Download wrapper
 Download read_ocmr.m and example_ocmr.m from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
+### Step 2: Download ISMRMRD libraries
+Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. 
 ### Step 3: Read the Data
 Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Modify the 'filename' as needed, execute example_ocmr.m in Matlab.
 
 ## Read Data Using Python
-### Step 1: Download ismrmrd libraries
-Download ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools.
-### Step 2: Download wrapper
-Download 'read_ocmr.py' and 'example_ocmr.ipynb' from https://github.com/MRIOSU/OCMR/tree/master/Python
+### Step 1: Download wrapper
+Download 'read_ocmr.py' and 'example_ocmr.ipynb' from https://github.com/MRIOSU/OCMR/tree/master/Python.
+### Step 2: Install IRMRMRD libraries
+Install ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools. For help, see the Jupyter Notebook entry 'example\_ocmr.ipynb' from the previous Step.
 ### Step 3: Read the Data
-Place 'read_ocmr.py' and 'example_ocmr.ipynb' as well as content of ismrmrd-python and ismrmrd-python-tools in one folder. Modify the 'filename' as needed, and run the example in 'example_ocmr.ipynb'.
+Place 'read_ocmr.py' and 'example_ocmr.ipynb' in one folder. Modify the 'filename' as needed, and run the example in 'example_ocmr.ipynb'.
 
 ## Data Structure
 Once a dataset is read into Matlab or Python, it yields the k-space array, kData, and a structure, param. The kData array has nine dimensions: [kx, ky, kz, coil, phase, set, slice, rep, avg], which represent frequency encoding, first phase encoding, second phase encoding, coil, phase (time), set (velocity encoding), slice, repetition, and number of averages, respectively. For example, a dataset with frequency encoding size 160, phase encoding size 120, number of coils 18, number of frames 60, number of slices 10 will generate kData with these dimension: 160x120x1x18x60x1x10x1x1. The second output, param, provides pertinent acquisition parameters. For example, param.FOV, param.TRes, param.flipAngle_deg, param.sequence_type specify field-of-view, temporal resolution, flip angle, and the type of sequence.
