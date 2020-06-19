@@ -1,5 +1,5 @@
 function [Kdata, param] = read_ocmr(file_name)
-% Before running the code, download the ISMRMRD matlab library from here:
+% Before running the code, download the ISMRMRD matlab library here:
 % https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd
 % Last modified: 06-08-2020 by Chong Chen (Chong.Chen@osumc.edu)
 %
