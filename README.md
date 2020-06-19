@@ -12,7 +12,7 @@ Download read_ocmr.m and example_ocmr.m from https://github.com/MRIOSU/OCMR/tree
 ### Step 2: Download ISMRMRD libraries
 Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. 
 ### Step 3: Read the Data
-Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Modify the 'filename' as needed, execute example_ocmr.m in Matlab.
+Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Execute example_ocmr.m in Matlab.
 
 ## Read Data Using Python
 ### Step 1: Download wrapper
