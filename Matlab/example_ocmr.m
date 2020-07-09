@@ -1,5 +1,7 @@
 % This is an example of Matlab script to read multi-coil k-space data from ISMRMD *.h5
 % Last modified: 06-08-2020 by Chong Chen (Chong.Chen@osumc.edu)
+% The example fully sampled dataset 'fs_0005_1_5T.h5' can be downloaded here: https://ocmr.s3.us-east-2.amazonaws.com/data/fs_0005_1_5T.h5
+% The example undersampled dataset 'us_0165_pt_1_5T.h5' can be downloaded here: https://ocmr.s3.us-east-2.amazonaws.com/data/us_0165_pt_1_5T.h5 
 
 close all;
 restoredefaultpath
