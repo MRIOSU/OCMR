@@ -3,23 +3,23 @@
 
 Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excellent soft-tissue contrast without the use of ionizing radiation. The limited efficiency of MRI data acquisition and physiological motions necessitate data undersampling. Recovering diagnostic quality CMR images from highly undersampled data has been active area of research, and several data acquisition and processing methods have been proposed to accelerate CMR. Platforms to objectively evaluate and compare different processing methods can expedite innovation and promote clinical translation of these methods. In this work, we introduce an open-access repository, called OCMR, that provides multi-coil k-space data from 53 fully sampled and 212 prospectively undersampled cardiac cine series. The fully sampled datasets are intended for quantitative comparison and evaluation of image reconstruction methods. The free-breathing, prospectively undersampled datasets are intended to qualitatively evaluate the performance and generalizability of the reconstruction methods. The datasets were collected on three Siemens Magnetom scanners: Prisma (3T), Avanto (1.5T) and Sola (1.5T). The data from the OCMR repository can be downloaded from the link on www.ocmr.edu. Each dataset is assigned eight attributes, which allows downloading a subset of the datasets.
 
-## Download OCMR Data 
+## Download and read OCMR Data 
 Download data from the OCMR repository from the link on this page www.ocmr.edu, or following the instruction in the OCMR Jupyter tutoril https://github.com/MRIOSU/OCMR/blob/master/Python/example_ocmr.ipynb. Below are the instructions to read OCMR data into Matlab and Python, respectively. After running the code, it will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
 
-## Read Data Using Matlab
-### Step 1: Download wrapper
+### Read Data Using Matlab
+#### Step 1: Download wrapper
 Download read_ocmr.m and example_ocmr.m from https://github.com/MRIOSU/OCMR/tree/master/Matlab.
-### Step 2: Download ISMRMRD libraries
+#### Step 2: Download ISMRMRD libraries
 Download ISMRMRD libraries from https://github.com/ismrmrd/ismrmrd/tree/master/matlab/%2Bismrmrd. 
-### Step 3: Read the Data
+#### Step 3: Read the Data
 Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in one folder. Execute example_ocmr.m in Matlab and select the OCMR data to be read.
 
-## Read Data Using Python
-### Step 1: Download wrapper
+### Read Data Using Python
+#### Step 1: Download wrapper
 Download 'read_ocmr.py' and 'example_ocmr.ipynb' from https://github.com/MRIOSU/OCMR/tree/master/Python.
-### Step 2: Install ISMRMRD libraries
+#### Step 2: Install ISMRMRD libraries
 Install ismrmrd-python from https://github.com/ismrmrd/ismrmrd-python and ismrmrd-python-tools from https://github.com/ismrmrd/ismrmrd-python-tools. For help, see the Jupyter Notebook entry 'example\_ocmr.ipynb' from the previous Step.
-### Step 3: Read the Data
+#### Step 3: Read the Data
 Place 'read_ocmr.py' and 'example_ocmr.ipynb' in one folder. Modify the 'filename' as needed, and run the example in 'example_ocmr.ipynb'.
 
 ## Data Structure
