@@ -20,7 +20,7 @@ Note, the file listing the attributes of each data file can be found here: https
 
 ## Read Data Using Python
 ### Step 1: Download wrapper
-Download 'read_ocmr.py' and 'example_ocmr.ipynb' from https://github.com/MRIOSU/OCMR/tree/master/Python.
+Download read_ocmr.py and example_ocmr.ipynb from https://github.com/MRIOSU/OCMR/tree/master/Python.
 ### Step 2: Read the data
 Execute example_ocmr.ipynb; it will generate a nine-dimensional array (kData) for the k-space data and a structure (param) that captures acquisition parameters. Note, this step eliminates the need to explicitly download the large tar file, ocmr_cine.tar.gz.
 ### Step 3: Read selected files
