@@ -3,6 +3,8 @@
 
 Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excellent soft-tissue contrast without the use of ionizing radiation. The limited efficiency of MRI data acquisition and physiological motions necessitate data undersampling. Recovering diagnostic quality CMR images from highly undersampled data has been active area of research, and several data acquisition and processing methods have been proposed to accelerate CMR. The availability of data to objectively evaluate and compare different reconstruction methods could expedite innovation and promote clinical translation of these methods. In this work, we introduce an open-access dataset, called OCMR, that provides multi-coil k-space data from 53 fully sampled cardiac cine series (comprising 81 slices) and 212 real-time, prospectively undersampled cardiac cine series (comprising 842 slices). The fully sampled data are intended for quantitative comparison and evaluation of image reconstruction methods. The free-breathing, prospectively undersampled data are intended to qualitatively evaluate the performance and generalizability of the reconstruction methods. The data were collected on three Siemens Magnetom scanners: Prisma (3T), Avanto (1.5T) and Sola (1.5T). The OCMR dataset is comprised of HDF5 files, with data in each file following the ISMRMRD format. Each file in the dataset is assigned eight attributes, which allows selecting a subset of the dataset.
 
+For more details, visit www.ocmr.info -- a website dedicated to the OCMR dataset.
+
 ## Download OCMR Data 
 Below are the instructions to read OCMR data into Matlab and Python. Running the code will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
 
