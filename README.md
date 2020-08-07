@@ -8,7 +8,7 @@ For more details, visit www.ocmr.info -- a dedicated website for the OCMR datase
 ## Download OCMR Data 
 Before downloading the data, read terms and conditions at www.ocmr.info/download/. If you agree to all the listed terms and conditions, you may proceed with downloading the data. Listed below are the instructions to read OCMR data into Matlab and Python.
 
-## Read Data Using Matlab
+## Matlab Instructions
 ### Step 1: Download data
 Download tar archive (ocmr_cine.tar.gz) by visiting https://ocmr.s3.amazonaws.com/data/ocmr_cine.tar.gz. This single file contains the entire dataset.
 ### Step 2: Download wrapper
@@ -20,7 +20,7 @@ Place read_ocmr.m, example_ocmr.m, and the entire ‘/+ismrmrd’ subfolder in o
 
 Note, the file listing the attributes of each data file can be found here: https://ocmr.s3.amazonaws.com/ocmr_data_attributes.csv.
 
-## Read Data Using Python
+## Python Instructions
 ### Step 1: Download wrapper
 Download read_ocmr.py and example_ocmr.ipynb from https://github.com/MRIOSU/OCMR/tree/master/Python.
 ### Step 2: Read the data
