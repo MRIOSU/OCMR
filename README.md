@@ -6,7 +6,7 @@ Cardiovascular MRI (CMR) is a non-invasive imaging modality that provides excell
 For more details, visit www.ocmr.info -- a dedicated website for the OCMR dataset.
 
 ## Download OCMR Data 
-Below are the instructions to read OCMR data into Matlab and Python. Running the code will generate a nine-dimensional array, kData, for the k-space data and a structure, param, that captures acquisition parameters.
+Before downloading the data, read terms and conditions at www.ocmr.info/download/. If you agree to all the listed terms and conditions, you may proceed with downloading the data. Listed below are the instructions to read OCMR data into Matlab and Python.
 
 ## Read Data Using Matlab
 ### Step 1: Download data
