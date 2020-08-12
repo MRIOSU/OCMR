@@ -38,4 +38,4 @@ All ISMRMRD data included in OCMR have been de-identified, where Protected Healt
 The current version (v1.0) of OCMR only includes cardiac cine data. We intend to progressively expand the size of cardiac cine data and include additional CMR applications, including 2D phase-contrast MRI.
 
 ## Contact Information
-For help with downloading and reading the data, contact Chong Chen (chen.7211@osu.edu); for feedback or questions about the OCMR dataset, contact Rizwan Ahmad (ahmad.46@osu.edu)
+For help with downloading and reading the data, contact Chong Chen (chen.7211@osu.edu); for feedback or questions about the OCMR dataset, contact the principal investigator, Rizwan Ahmad (ahmad.46@osu.edu)
