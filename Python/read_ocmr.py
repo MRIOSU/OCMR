@@ -64,12 +64,12 @@ def read_ocmr(filename):
         nPhases = 1;
 
     try:
-        nSets = hdr.encoding.encodingLimits.set.maximum + 1;
+        nSets = enc.encodingLimits.set.maximum + 1;
     except:
         nSets = 1;
 
     try:
-        nAverage = hdr.encoding.encodingLimits.average.maximum + 1;
+        nAverage = enc.encodingLimits.average.maximum + 1;
     except:
         nAverage = 1;   
         
