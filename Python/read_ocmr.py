@@ -96,10 +96,23 @@ def read_ocmr(filename):
     # Initialiaze a storage array
     param['kspace_dim'] = {'kx ky kz coil phase set slice rep avg'};
     all_data = np.zeros((eNx, eNy, eNz, nCoils, nPhases, nSets, nSlices, nReps, nAverage), dtype=np.complex64)
+    
+    # check if pilot tone (PT) is on
+    pilottone = 0;
+    try:
+        if (header.userParameters.userParameterLong[3].name == 'PilotTone'):
+            pilottone = header.userParameters.userParameterLong[3].value;
+    except:
+        pilottone = 0;  
+            
+    if pilottone == 1:
+        print('Pilot Tone is on, discarding the first 3 and last 1 k-space point for each line')
 
     # Loop through the rest of the acquisitions and stuff
     for acqnum in range(firstacq,dset.number_of_acquisitions()):
         acq = dset.read_acquisition(acqnum)
+        if pilottone == 1: # discard the first 3 and last 1 k-space point to exclude PT artifact
+            acq.data[:,[0,1,2,acq.data.shape[1]-1]] = 0        
 
         # Stuff into the buffer
         y = acq.idx.kspace_encode_step_1
